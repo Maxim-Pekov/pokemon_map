@@ -50,7 +50,7 @@ def show_all_pokemons(request):
 
 
 def show_pokemon(request, pokemon_id):
-    pokemon = get_object_or_404(Pokemon, pokemon_id=pokemon_id)
+    pokemon = get_object_or_404(Pokemon, id=pokemon_id)
     pokemon_evolution = {}
     if pokemon.previous_evolution:
         previous_evolution = pokemon.previous_evolution
