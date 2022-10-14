@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Pokemon(models.Model):
-    pokemon_id = models.IntegerField(verbose_name='Номер_эволюции', default=1, unique=True)
+    pokemon_id = models.IntegerField(verbose_name='Номер_эволюции', unique=True)
     title = models.CharField(max_length=200, verbose_name='Имя')
     image = models.ImageField(verbose_name='Изображение')
     description = models.TextField(blank=True, verbose_name='Описание')
