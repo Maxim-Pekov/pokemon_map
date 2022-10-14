@@ -16,7 +16,7 @@ class Pokemon(models.Model):
         on_delete=models.SET_NULL
     )
 
-    def __str__(self):
+    def __repr__(self):
         return f'{self.title}'
 
 
@@ -32,6 +32,6 @@ class PokemonEntity(models.Model):
     defence = models.IntegerField(blank=True, null=True, verbose_name='Защита')
     stamina = models.IntegerField(blank=True, null=True, verbose_name='Выносливость')
 
-    def __str__(self):
+    def __repr__(self):
         return f'{self.pokemon.title}'
 
