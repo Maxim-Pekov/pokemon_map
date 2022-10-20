@@ -17,7 +17,7 @@ class Pokemon(models.Model):
     )
 
     def __repr__(self):
-        return f'{self.title}'
+        return self.title
 
 
 class PokemonEntity(models.Model):
@@ -33,5 +33,5 @@ class PokemonEntity(models.Model):
     stamina = models.IntegerField(blank=True, null=True, verbose_name='Выносливость')
 
     def __repr__(self):
-        return f'{self.pokemon.title}'
+        return self.pokemon.title
 
